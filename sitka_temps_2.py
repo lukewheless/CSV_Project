@@ -4,22 +4,11 @@ open_file = open("sitka_weather_07-2018_simple.csv", "r")
 csv_file = csv.reader(open_file, delimiter = ",")
 
 row = next(csv_file)
-'''
-print(row)
-
-for i, c in enumerate(row):
-    print(i,c)
-'''
-
-#for row in csv_file:
-    #high.append(int(row[5]))
-#print(high)
 
 low = []
 date = []
+
 from datetime import datetime
-x = datetime.striptime("2010-07-01", "%Y-%m-%d")
-print(x)
 
 for row in csv_file:
     low.append(int(row[6]))
@@ -30,7 +19,7 @@ import matplotlib.pyplot as plt
 
 fig = plt.figure()
 
-plt.plot(dates, high, c = "blue")
+plt.plot(date, low, c = "blue")
 plt.title('Daily High Temp', fontsize = 20)
 plt.ylabel('Temperature (F)', fontsize = 18)
 plt.tick_params(axis = 'both', labelsize = 16)

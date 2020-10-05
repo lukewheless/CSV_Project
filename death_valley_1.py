@@ -5,12 +5,6 @@ csv_file = csv.reader(open_file, delimiter = ",")
 
 row = next(csv_file)
 
-'''
-print(row)
-
-for i, c in enumerate(row):
-    print(i,c)
-'''
 from datetime import datetime
 
 low = []
